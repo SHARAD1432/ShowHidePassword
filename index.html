@@ -4,10 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            height: 100vh;
+        }
+        button{
+            display: block;
+            padding: 5px;
+            border:2px solid black;
+            background-color:rgb(245, 22, 59);
+        }
+        input,button{
+            margin:30px;
+        }
+    </style>
 </head>
 <body>
     
     <input type="password" placeholder="Enter password">
     <button>Show</button>
 </body>
+<script>
+    let btn=document.querySelector("button");
+    let inputData=document.querySelector("input");
+    
+   
+    btn.addEventListener("click",()=>{
+        if(btn.innerHTML=="Show"){
+             inputData.type="text"
+             btn.innerHTML="Hide"
+             
+        }
+        else{
+               inputData.type="password"
+             btn.innerHTML="Show"
+           
+        }
+       
+    })
+</script>
 </html>
